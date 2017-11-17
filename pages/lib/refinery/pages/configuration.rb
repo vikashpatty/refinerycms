@@ -60,7 +60,7 @@ module Refinery
     self.types = Types.registered
     self.auto_expand_admin_tree = true
     self.friendly_id_reserved_words = %w(
-      index new session login logout users refinery admin images
+      index new session login logout users refinery admin images api
     )
     self.layout_templates_pattern = 'app', 'views', '{layouts,refinery/layouts}', '*html*'
     self.view_templates_pattern = 'app', 'views', '{pages,refinery/pages}', '*html*'
