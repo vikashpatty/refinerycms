@@ -369,9 +369,9 @@ module Refinery
     end
 
     def slug_locale
-      return Mobility.locale if translation_for(Mobility.locale, false).try(:slug).present?
+      return Mobility.locale if slug_backend.read(Mobility.locale).present?
 
-      if translations.empty? || translation_for(Refinery::I18n.default_frontend_locale, false).present?
+      if translations.empty? || slug_backend.read(Refinery::I18n.default_frontend_locale).present?
         Refinery::I18n.default_frontend_locale
       else
         translations.first.locale
