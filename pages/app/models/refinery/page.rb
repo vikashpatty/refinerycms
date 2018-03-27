@@ -86,7 +86,7 @@ module Refinery
       def find_by_path_or_id!(path, id)
         page = find_by_path_or_id(path, id)
 
-        raise ActiveRecord::RecordNotFound unless page
+        raise ::ActiveRecord::RecordNotFound unless page
 
         page
       end
